@@ -3,21 +3,26 @@
     <title>Wafer Fault Detection</title>
     <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <style>
-        .bgr-gray{
-            background-color:#ffffff;
-        }
         .bdy-bgr{
-            background-color:#ffc266;
+            background-color:#d7ecf4;
         }
         .bg-nav-purple{
             background-color:#1a1c20;
         }
-        hr.rounded {
-            border-top: 8px solid #bbb;
-            border-radius: 5px;
+        hr.solid{
+            border-top: 3px solid linear-gradient(to bottom right, #FF5F6D, #FFC371);
         }
-        hr.solid {
-            border-top: 3px solid #FF9900;
+        .hr1{
+            border:1px;
+            border-radius:1px;
+            height: 3px;
+            background-image: linear-gradient(to bottom right, #005b96 , #6497b1);
+        }
+        .text-info-custom{
+            color: #ed601a
+        }
+        .card{
+            border-radius:0px;
         }
     </style>
 </head>
@@ -32,7 +37,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">{{metric['model']}}</h5>
-                        <hr class="solid">
+                        <hr class="hr1">
                         <p class="card-text">Accuracy: {{metric['accuracy']}}</p>
                         <p class="card-text">Recall: {{metric['recall']}}</p>
                         <p class="card-text">Precision: {{metric['precision']}}</p>

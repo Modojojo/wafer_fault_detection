@@ -16,7 +16,7 @@ TOTAL_FILES = None
 params_path = 'params.yaml'
 webapp_root = 'webapp'
 
-static_dir = os.path.join(webapp_root, "static")
+static_dir = os.path.join(webapp_root, "static", "css")
 template_dir = os.path.join(webapp_root, "templates")
 
 app = Flask(__name__, static_folder=static_dir, template_folder=template_dir)
@@ -183,6 +183,6 @@ def watcher():
 
 
 if __name__ == '__main__':
-    #watcher_thread = threading.Thread(target=watcher)
-    #watcher_thread.start()
+    watcher_thread = threading.Thread(target=watcher)
+    watcher_thread.start()
     app.run()
