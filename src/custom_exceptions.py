@@ -1,0 +1,2 @@
+class PreProcessException(Exception):
+    pass

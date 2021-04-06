@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Wafer Fault Detection</title>
+    <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .bdy-bgr{
+            background-color:#d7ecf4;
+        }
+        .bg-nav-purple{
+            background-color:#1a1c20;
+        }
+        hr.solid {
+            border-top: 3px solid linear-gradient(to bottom right, #FF5F6D, #FFC371);
+        }
+        .hr1 {
+            border:1px;
+            border-radius:1px;
+            height: 3px;
+            background-image: linear-gradient(to bottom right, #005b96 , #6497b1);
+<!--            background-image: linear-gradient(to bottom right, #FF5F6D, #FFC371);-->
+        }
+        .text-info-custom{
+            color: #ed601a
+        }
+        .card{
+            border-radius:0px;
+        }
+    </style>
+</head>
+<body class="bdy-bgr">
+    <nav class="navbar navbar-dark bg-dark shadow-lg">
+      <span class="navbar-brand mb-0 h1">Dashboard</span>
+    </nav>
+    <div class = "container-fluid">
+        <div class = "row mt-4 mb-2 ml-2 mr-2 ">
+
+            <div class = "col-md-4">
+                <div class="card bgr-gray text-center col-md-12 ml-2 mr-2 mt-3 mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Start Training</h5>
+                        <hr class="hr1">
+                        <h6 class="card-subtitle mb-2 text-muted">Commence the training Process</h6>
+                        <p class="card-text">Starts the Training process with whatever recent data is Available on Server data folder</p>
+                        <form action="/train" method="get">
+                            <button class="btn btn-primary shadow" id="trainBtn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" type="submit">Start Training</button>
+                        </form>
+                        <div class="collapse" id="collapseExample">
+                            <h5 class="card-subtitle mb-2 text-info">Training Process has been started, feel free to check the logs</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bgr-gray text-center col-md-12 ml-2 mr-2 mt-3 mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Start Predictions</h5>
+                        <hr class="hr1">
+                        <h6 class="card-subtitle mb-2 text-muted">Commence the Prediction Process</h6>
+                        <p class="card-text">Starts the Prediction process with whatever recent data is Available on Server's Prediction data folder</p>
+                        <form action="/predict" method="get">
+                            <button class="btn btn-primary shadow" id="predictBtn" data-toggle="collapse" data-target="#collapsePrediction" aria-expanded="false" aria-controls="collapsePrediction" type="submit" >Start Prediction</button>
+                        </form>
+                        <div class="collapse" id="collapsePrediction">
+                            <h6 class="card-subtitle mb-2 text-info">Prediction Process has been started, feel free to check the logs</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-md-4">
+                <div class="card bgr-gray text-center col-md-12 ml-2 mr-2 mt-3 mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">View Statistics</h5>
+                        <hr class="hr1">
+                        <h6 class="card-subtitle mb-2 text-muted">Open Previously trained model Stats</h6>
+                        <p class="card-text">View Metrics for Each model trained during the Training Process</p>
+                        <form action="/metrics" method="get">
+                            <button class="btn btn-primary shadow" id="metricsBtn"  type="submit">View Statistics</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-md-4">
+                <div class="card bgr-gray text-center col-md-12 ml-2 mr-2 mt-3 mb-3 shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Logs</h5>
+                        <hr class="hr1">
+                        <p class="card-text">Lets you View the logs based on the selection.</p>
+                        <form action="/logs" method="post">
+                            <select name = "logs" class="form-select form-control form-group">
+                              <option selected>Select Logs type</option>
+                              <option value="process">Training Process</option>
+                              <option value="training">Training</option>
+                              <option value="prediction">Prediction Process</option>
+                              <option value="file_validation">File Validation</option>
+                            </select>
+                            <button class="btn btn-primary shadow form-group" id="logsBtn" type="submit">View Logs</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

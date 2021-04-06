@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Wafer Fault Detection</title>
+    <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .bgr-gray{
+            background-color:#ffffff;
+        }
+        .bdy-bgr{
+            background-color:#ffc266;
+        }
+        .bg-nav-purple{
+            background-color:#1a1c20;
+        }
+        hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+        }
+        hr.solid {
+            border-top: 3px solid #FF9900;
+        }
+    </style>
+</head>
+<body class = "bdy-bgr">
+    <div class = "container-fluid">
+        <div class = "row mt-5 mb-5 ml-5 mr-5">
+            <div class="card-deck col-md-12">
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <h5 class="card-title"> Oops !! 404 Some Error Occurred</h5>
+                        <hr class="solid">
+                        <p class="card-text">{{ message }}</p>
+                    </div>
+                    <div class="card-footer text-center center">
+                        <p class="card-text"><small class="text-muted">
+                            <form action = "/" method="get" class="form-inline my-2 my-lg-0 center">
+                                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Back to Dashboard</button>
+                            </form>
+                        </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

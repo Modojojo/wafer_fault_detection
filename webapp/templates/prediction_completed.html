@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Wafer Fault Detection</title>
+    <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .bgr-gray{
+            background-color:#ffffff;
+        }
+        .bdy-bgr{
+            background-color:#e3f6f5;
+        }
+        .bg-nav-purple{
+            background-color:#1a1c20;
+        }
+    </style>
+</head>
+<body class = "bdy-bgr">
+    <nav class="navbar navbar-dark bg-dark shadow">
+      <span class="navbar-brand mb-0 h1">Prediction Dashboard</span>
+    </nav>
+    <div class = "container-fluid">
+        <div class = "row mt-4 mb-2 ml-2 mr-2 ">
+            <div class = "col-md-2"></div>
+            <div class="card col-md-8 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Prediction Completed</h5>
+                    <p class="card-text">Prediction process has been completed, Predictions have been saved to Database, Please check logs for more information</p>
+                    <form action="/" method="get">
+                            <button class="btn btn-outline-success" id="backBtn" type="submit">Back to Dashboard</button>
+                    </form>
+                </div>
+            </div>
+            <div class = "col-md-2"></div>
+        </div>
+    </div>
+</body>
+</html>

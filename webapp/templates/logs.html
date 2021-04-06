@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Wafer Fault Detection</title>
+    <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .bgr-gray{
+            background-color:#ffffff;
+        }
+        .bdy-bgr{
+            background-color:#ffc266;
+        }
+        .bg-nav-purple{
+            background-color:#1a1c20;
+        }
+        hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+        }
+        hr.solid {
+            border-top: 3px solid #FF9900;
+        }
+    </style>
+</head>
+<body class = "bdy-bgr">
+    <nav class="navbar navbar-dark bg-dark shadow">
+        <span class="navbar-brand mb-0 h1">Logs</span>
+    </nav>
+    <div class = "container-fluid">
+        <ul class="list-group ml-5 mr-5 mt-5 mb-5">
+            {% for log in logs %}
+            <li class="list-group-item">{{log[0]}} - {{log[1]}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
